@@ -1,9 +1,7 @@
-# local-overlay
+# mcdubh overlay
 
 My personal Gentoo overlay that I will be using
-for projects, such as Redot. I should probably
-rename it to "mcdubh overlay" so it's less
-confusing if anyone uses it.
+for projects, such as Redot.
 
-Main: http://git.mcdubh.org/local-overlay.git
+Main: https://git.mcdubh.org/local-overlay.git
 Alt: https://github.com/mcdubhghlas/local-overlay
