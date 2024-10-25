@@ -65,12 +65,12 @@ BDEPEND="
 
 src_unpack() {
 	unpack ${P}.zip
-	mv redot-linux-dev ${P}
-	mv ${P}/redot.linuxbsd.editor.x86_64 ${P}/${P}
+	mkdir ${P}/
+	mv Redot_v4.3-beta.1_linux.x86_64 ${P}/${P}
 }
 
 src_install() {
-	newbin redot* redot-bin
+	newbin redot-bin-4.3_beta redot-bin
 }
 
 

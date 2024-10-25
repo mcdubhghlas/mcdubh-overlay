@@ -74,8 +74,7 @@ BDEPEND="
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	mv redot-engine-2024101114/ ${P}
-	#mv ${P}/redot.linuxbsd.editor.x86_64 ${P}/${P}
+	mv redot-engine-redot-4.3-beta.1/ ${P}/
 }
 
 
