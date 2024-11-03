@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
-SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/redot-4.3-beta.2.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/redot-4.3-beta.3.tar.gz -> ${P}.tar.gz"
 
 LICENSE="
 	MIT
