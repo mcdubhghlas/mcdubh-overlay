@@ -66,7 +66,7 @@ BDEPEND="
 src_unpack() {
 	unpack ${P}.zip
 	mkdir ${P}/
-	mv Redot_v4.3-beta.1_linux.x86_64 ${P}/${P}
+	mv Redot* ${P}/${P}
 }
 
 src_install() {
