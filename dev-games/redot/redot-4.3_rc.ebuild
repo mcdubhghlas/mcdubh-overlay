@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
-SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/redot-4.3-beta.3.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/redot-4.3-rc.1.tar.gz -> ${P}.tar.gz"
 
 LICENSE="
 	MIT
@@ -13,7 +13,7 @@ LICENSE="
 	gui? ( CC-BY-4.0 ) tools? ( OFL-1.1 )
 "
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="
 	alsa +dbus debug deprecated +fontconfig +gui pulseaudio raycast
 	speech test +theora +tools +udev +upnp +vulkan wayland +webp
@@ -74,7 +74,7 @@ BDEPEND="
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	mv redot-engine-redot-4.3-beta.1/ ${P}/
+	mv redot-engine*/ ${P}/
 }
 
 
