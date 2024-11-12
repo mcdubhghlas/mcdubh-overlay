@@ -5,7 +5,8 @@ EAPI=8
 
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
-SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-rc.1/Redot_v4.3-rc.1_linux.x86_64.zip -> ${P}.zip"
+# TODO: How do I allow for other keywords?
+SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-rc.2/Redot_v4.3-rc.2_linux.x86_64.zip -> ${P}.zip"
 
 LICENSE="
 	MIT
@@ -70,7 +71,7 @@ src_unpack() {
 }
 
 src_install() {
-	newbin redot-bin-4.3_beta redot-bin
+	newbin redot-bin* redot-bin
 }
 
 
