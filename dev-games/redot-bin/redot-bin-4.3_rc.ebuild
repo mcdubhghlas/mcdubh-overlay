@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
 # TODO: How do I allow for other keywords?
-SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-rc.3/Redot_v4.3-rc.3_linux.x86_64.zip -> ${P}.zip"
+SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-rc.4/Redot_v4.3-rc.4_linux.x86_64.zip -> ${P}.zip"
 
 LICENSE="
 	MIT
