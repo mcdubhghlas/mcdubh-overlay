@@ -7,7 +7,6 @@ DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
 SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/redot-4.3-stable.tar.gz -> ${P}.tar.gz"
 
-
 LICENSE="
 	MIT
 	Apache-2.0 BSD Boost-1.0 CC0-1.0 Unlicense ZLIB
@@ -72,6 +71,9 @@ BDEPEND="
 	virtual/pkgconfig
 	wayland? ( dev-util/wayland-scanner )
 "
+PATCHES=(
+	"${FILESDIR}"/redot-4.3-version.patch
+)
 
 src_unpack() {
 	unpack ${P}.tar.gz
