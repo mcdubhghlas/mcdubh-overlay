@@ -5,8 +5,11 @@ EAPI=8
 
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
-# TODO: How do I allow for other keywords?
-SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-rc.4/Redot_v4.3-rc.4_linux.x86_64.zip -> ${P}.zip"
+# TODO: How do I allow for other keywords for a binary?
+SRC_URI="https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-stable/Redot_v4.3-stable_linux.x86_64.zip -> ${P}.zip
+	x86? ( https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-stable/Redot_v4.3-stable_linux.x86_32.zip -> ${P}.zip )
+	arm? ( https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-stable/Redot_v4.3-stable_linux.arm32.zip -> ${P}.zip )
+	arm64? ( https://github.com/Redot-Engine/redot-engine/releases/download/redot-4.3-stable/Redot_v4.3-stable_linux.arm64.zip -> ${P}.zip )"
 
 LICENSE="
 	MIT
@@ -14,7 +17,7 @@ LICENSE="
 	gui? ( CC-BY-4.0 ) tools? ( OFL-1.1 )
 "
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="
 	alsa +dbus debug deprecated +fontconfig +gui pulseaudio raycast
 	speech test +theora +tools +udev +upnp +vulkan wayland +webp
@@ -71,7 +74,7 @@ src_unpack() {
 }
 
 src_install() {
-	newbin redot-bin* redot-bin
+	newbin redot* redot-bin
 }
 
 
