@@ -174,6 +174,29 @@ src_compile() {
 src_install() {
 	# suffix varies depending on arch/features, use wildcard to simplify
 	newbin bin/redot* redot
+
+	# Install manpages to /usr/share/man
+	doman misc/dist/linux/godot.6
+	# Install doc files to /usr/share/doc/${PF}
+	dodoc AUTHORS.md CHANGELOG.md DONORS.md README.md
+
+	if use gui; then
+		# install selected icon as redot.svg
+		newicon icon.svg redot.svg
+		# Install .desktop to /usr/share/applications
+		domenu misc/dist/linux/org.redotengine.Redot.desktop
+
+		# cd
+		insinto /usr/share/metainfo
+		# install file
+		doins misc/dist/linux/org.redotengine.Redot.appdata.xml
+
+		insinto /usr/share/mime/application
+		doins misc/dist/linux/org.redotengine.Redot.xml
+	fi
 }
 
+pkg_postinst() {
+	update-mime-database /usr/share/mime/
+}
 
