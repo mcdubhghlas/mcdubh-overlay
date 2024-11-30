@@ -176,7 +176,8 @@ src_install() {
 	newbin bin/redot* redot
 
 	# Install manpages to /usr/share/man
-	doman misc/dist/linux/godot.6
+	# Manpages blocked until PR #804 is added in.
+	#doman misc/dist/linux/godot.6
 	# Install doc files to /usr/share/doc/${PF}
 	dodoc AUTHORS.md CHANGELOG.md DONORS.md README.md
 
