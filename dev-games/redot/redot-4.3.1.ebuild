@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Open-source game engine for everyone. No strings attached."
 HOMEPAGE="https://www.redotengine.org/"
-SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/${P}-alpha.1.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Redot-Engine/redot-engine/archive/refs/tags/${P}-alpha.2.tar.gz -> ${P}.tar.gz"
 
 LICENSE="
 	MIT
@@ -24,11 +24,13 @@ RESTRICT="test"
 RDEPEND="
 	app-arch/brotli:=
 	app-arch/zstd:=
+	dev-build/scons:=
 	dev-games/recastnavigation:=
 	dev-libs/icu:=
 	dev-libs/libpcre2:=[pcre32]
 	media-libs/freetype[brotli,harfbuzz]
 	media-libs/harfbuzz:=[icu]
+	media-libs/glu:=
 	media-libs/libogg
 	media-libs/libpng:=
 	media-libs/libvorbis

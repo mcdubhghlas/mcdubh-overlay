@@ -25,10 +25,12 @@ RDEPEND="
 	app-arch/brotli:=
 	app-arch/zstd:=
 	dev-games/recastnavigation:=
+	dev-build/scons:=
 	dev-libs/icu:=
 	dev-libs/libpcre2:=[pcre32]
 	media-libs/freetype[brotli,harfbuzz]
 	media-libs/harfbuzz:=[icu]
+	media-libs/glu:=
 	media-libs/libogg
 	media-libs/libpng:=
 	media-libs/libvorbis
